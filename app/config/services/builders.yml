@@ -1,0 +1,5 @@
+services:
+    arena.serializer.builder.activity:
+        decorates: api_platform.serializer.context_builder
+        class: AppBundle\Serializer\ActivityContextBuilder
+        arguments: ['@arena.serializer.builder.activity.inner', '@security.authorization_checker']

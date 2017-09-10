@@ -1,0 +1,128 @@
+easy_admin:
+    site_name: 'Arena'
+    design:
+        brand_color: '#00897B'
+        color_scheme: 'light'
+        form_theme: 'vertical'
+        menu:
+            - { entity: 'User', icon: 'user' }
+            - { entity: 'Communication', icon: 'comment' }
+            - { entity: 'Sport', icon: 'futbol-o' }
+            - { entity: 'Activity', icon: 'trophy' }
+            - { entity: 'Registration', icon: 'address-card' }
+            - { entity: 'Notification', icon: 'bell' }
+    formats:
+        date:     'd/m/Y'
+        time:     'H:i'
+        datetime: 'd/m/Y H:i'
+    entities:
+        User:
+            class: AppBundle\Entity\User
+            label: 'Users'
+            form:
+                title: ''
+                fields:
+                    - 'fullName'
+                    - 'email'
+            list:
+                title: ''
+                fields:
+                    - 'fullName'
+                    - 'email'
+                    - 'activities'
+                    - 'registrations'
+                    - 'enabled'
+            disabled_actions: ['new']
+        Communication:
+            class: AppBundle\Entity\Communication
+            label: 'Communications'
+            form:
+                title: ''
+                fields:
+                    - 'user'
+                    - 'subject'
+                    - 'body'
+            list:
+                title: ''
+                fields:
+                    - 'user'
+                    - 'subject'
+                    - 'body'
+                    - 'sentAt'
+            disabled_actions: ['edit', 'delete']
+        Sport:
+            class: AppBundle\Entity\Sport
+            label: 'Sports'
+            form:
+                title: ''
+                fields:
+                    - 'name'
+                    - 'description'
+            list:
+                title: ''
+                fields:
+                    - 'name'
+                    - 'description'
+                    - 'activities'
+        Activity:
+            class: AppBundle\Entity\Activity
+            label: 'Activities'
+            form:
+                title: ''
+                fields:
+                    - { type: 'group', label: 'Basic information' }
+                    - 'title'
+                    - 'sport'
+                    - 'owner'
+                    - { type: 'divider' }
+                    - 'startsAt'
+                    - { property: 'duration', help: 'In minutes' }
+                    - { type: 'group', label: 'Additional information' }
+                    - 'location'
+                    - 'seats'
+                    - 'description'
+            list:
+                title: ''
+                fields:
+                    - 'title'
+                    - 'sport'
+                    - 'owner'
+                    - 'startsAt'
+                    - 'duration'
+                    - 'seats'
+                    - 'registrations'
+        Registration:
+            class: AppBundle\Entity\Registration
+            label: 'Registrations'
+            form:
+                title: ''
+                fields:
+                    - 'user'
+                    - 'activity'
+                    - { type: 'divider' }
+                    - { property: 'type', type: 'choice', type_options: { choices: {'Application': 'application', 'Invitation': 'invitation'} } }
+                    - { property: 'status', type: 'choice', type_options: { choices: {'Accepted': 'accepted', 'Refused': 'refused', 'Waiting': 'waiting'} } }
+            list:
+                title: ''
+                fields:
+                    - 'user'
+                    - 'activity'
+                    - 'type'
+                    - 'status'
+        Notification:
+            class: AppBundle\Entity\Notification
+            label: 'Notifications'
+            form:
+                title: ''
+                fields:
+                    - 'user'
+                    - 'activity'
+                    - { property: 'type', type: 'choice', type_options: { choices: {'Application': 'application', 'Invitation': 'invitation', 'Acceptance': 'acceptance', 'Rejection': 'rejection'} } }
+            list:
+                title: ''
+                fields:
+                    - 'user'
+                    - 'activity'
+                    - 'type'
+                    - 'sentAt'
+            disabled_actions: ['new', 'edit', 'delete']

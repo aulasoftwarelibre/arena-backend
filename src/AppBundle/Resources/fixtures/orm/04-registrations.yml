@@ -1,0 +1,67 @@
+AppBundle\Entity\Registration:
+  registration1:
+    createdAt: <dateTimeThisMonth()>
+    type: 'invitation'
+    status: 'waiting'
+    user: '@victor'
+    activity: '@omar-padel'
+  registration2:
+    createdAt: <dateTimeThisMonth()>
+    type: 'invitation'
+    status: 'accepted'
+    user: '@victor'
+    activity: '@jose-ciclismo'
+  registration3:
+    createdAt: <dateTimeThisMonth()>
+    type: 'application'
+    status: 'waiting'
+    user: '@victor'
+    activity: '@ruben-running'
+  registration4:
+    createdAt: <dateTimeThisMonth()>
+    type: 'application'
+    status: 'accepted'
+    user: '@victor'
+    activity: '@paco-baloncesto'
+  registration5:
+    createdAt: <dateTimeThisMonth()>
+    type: 'invitation'
+    status: 'waiting'
+    user: '@victor'
+    activity: '@ruano-natacion'
+  registration6:
+    createdAt: <dateTimeThisMonth()>
+    type: 'application'
+    status: 'waiting'
+    user: '@victor'
+    activity: '@jesus-futbol'
+  registration7:
+    createdAt: <dateTimeThisMonth()>
+    type: 'invitation'
+    status: 'waiting'
+    user: '@victor'
+    activity: '@laura-running'
+  registration8:
+    createdAt: <dateTimeThisMonth()>
+    type: 'application'
+    status: 'accepted'
+    user: '@victor'
+    activity: '@elena-baloncesto'
+  registration9:
+    createdAt: <dateTimeThisMonth()>
+    type: 'application'
+    status: 'accepted'
+    user: '@laura'
+    activity: '@victor-tenis'
+  registration10:
+    createdAt: <dateTimeThisMonth()>
+    type: 'application'
+    status: 'waiting'
+    user: '@ivan'
+    activity: '@victor-tenis'
+  registration11:
+    createdAt: <dateTimeThisMonth()>
+    type: 'invitation'
+    status: 'waiting'
+    user: '@elena'
+    activity: '@victor-tenis'

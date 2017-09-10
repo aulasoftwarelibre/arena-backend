@@ -1,0 +1,56 @@
+AppBundle\Entity\Notification:
+  notification1:
+    type: 'invitation'
+    sentAt: <dateTimeThisMonth()>
+    user: '@victor'
+    activity: '@omar-padel'
+  notification2:
+    type: 'invitation'
+    sentAt: <dateTimeThisMonth()>
+    user: '@victor'
+    activity: '@jose-ciclismo'
+  notification3:
+    type: 'acceptance'
+    sentAt: <dateTimeThisMonth()>
+    user: '@victor'
+    activity: '@jose-ciclismo'
+  notification4:
+    type: 'application'
+    sentAt: <dateTimeThisMonth()>
+    user: '@victor'
+    activity: '@ruben-running'
+  notification5:
+    type: 'application'
+    sentAt: <dateTimeThisMonth()>
+    user: '@victor'
+    activity: '@paco-baloncesto'
+  notification6:
+    type: 'acceptance'
+    sentAt: <dateTimeThisMonth()>
+    user: '@victor'
+    activity: '@paco-baloncesto'
+  notification7:
+    type: 'invitation'
+    sentAt: <dateTimeThisMonth()>
+    user: '@victor'
+    activity: '@ruano-natacion'
+  notification8:
+    type: 'application'
+    sentAt: <dateTimeThisMonth()>
+    user: '@victor'
+    activity: '@jesus-futbol'
+  notification9:
+    type: 'invitation'
+    sentAt: <dateTimeThisMonth()>
+    user: '@victor'
+    activity: '@laura-running'
+  notification10:
+    type: 'application'
+    sentAt: <dateTimeThisMonth()>
+    user: '@victor'
+    activity: '@elena-baloncesto'
+  notification10:
+    type: 'acceptance'
+    sentAt: <dateTimeThisMonth()>
+    user: '@victor'
+    activity: '@elena-baloncesto'
